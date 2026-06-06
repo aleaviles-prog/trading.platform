@@ -1,12 +1,11 @@
 // Configuración de Firebase
-// IMPORTANTE: Reemplaza estos valores con los de tu proyecto Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyDxxxxxxxxxxxxxxxxxxxxxx",
-    authDomain: "tu-proyecto.firebaseapp.com",
-    projectId: "tu-proyecto",
-    storageBucket: "tu-proyecto.appspot.com",
-    messagingSenderId: "123456789",
-    appId: "1:123456789:web:xxxxxxxxxxxxx"
+  apiKey: "AIzaSyCsJpaDypEyfuwgkLKBmaFHGuZdbAa4-xs",
+  authDomain: "web-trading-84360.firebaseapp.com",
+  projectId: "web-trading-84360",
+  storageBucket: "web-trading-84360.firebasestorage.app",
+  messagingSenderId: "788624307776",
+  appId: "1:788624307776:web:73755d25533e1514ea11a5"
 };
 
 // Inicializar Firebase
@@ -43,3 +42,4 @@ const APP_CONFIG = {
         ]
     }
 };
+
