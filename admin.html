@@ -20,18 +20,6 @@
                 <a href="#" class="nav-item" onclick="showSection('users')">
                     👥 Usuarios
                 </a>
-                <a href="#" class="nav-item" onclick="showSection('deposits')">
-                    💰 Depósitos
-                </a>
-                <a href="#" class="nav-item" onclick="showSection('withdrawals')">
-                    💸 Retiros
-                </a>
-                <a href="#" class="nav-item" onclick="showSection('trades')">
-                    📈 Operaciones
-                </a>
-                <a href="#" class="nav-item" onclick="showSection('settings')">
-                    ⚙️ Configuración
-                </a>
             </nav>
         </aside>
 
@@ -51,16 +39,12 @@
                         <p class="stat-number" id="totalUsers">0</p>
                     </div>
                     <div class="stat-card">
-                        <h3>Depósitos Pendientes</h3>
-                        <p class="stat-number" id="pendingDeposits">0</p>
+                        <h3>Operaciones Totales</h3>
+                        <p class="stat-number" id="totalTrades">0</p>
                     </div>
                     <div class="stat-card">
-                        <h3>Retiros Pendientes</h3>
-                        <p class="stat-number" id="pendingWithdrawals">0</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Volumen Total</h3>
-                        <p class="stat-number">$<span id="totalVolume">0</span></p>
+                        <h3>Balance Total</h3>
+                        <p class="stat-number">$<span id="totalBalance">0</span></p>
                     </div>
                 </div>
             </section>
@@ -74,12 +58,10 @@
                 <table class="admin-table">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Email</th>
                             <th>Balance</th>
                             <th>Estado</th>
-                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody id="usersTableBody">
@@ -87,78 +69,17 @@
                     </tbody>
                 </table>
             </section>
-
-            <!-- Deposits Section -->
-            <section id="deposits" class="admin-section hidden">
-                <h2>Gestión de Depósitos</h2>
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Usuario</th>
-                            <th>Cantidad</th>
-                            <th>Método</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody id="depositsTableBody">
-                        <!-- Los depósitos se cargarán aquí -->
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Withdrawals Section -->
-            <section id="withdrawals" class="admin-section hidden">
-                <h2>Gestión de Retiros</h2>
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Usuario</th>
-                            <th>Cantidad</th>
-                            <th>Método</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody id="withdrawalsTableBody">
-                        <!-- Los retiros se cargarán aquí -->
-                    </tbody>
-                </table>
-            </section>
         </main>
-    </div>
-
-    <!-- Modal para editar usuario -->
-    <div id="editUserModal" class="modal hidden">
-        <div class="modal-content">
-            <h3>Editar Usuario</h3>
-            <form id="editUserForm">
-                <div class="form-group">
-                    <label>Balance</label>
-                    <input type="number" id="editBalance" step="0.01">
-                </div>
-                <div class="form-group">
-                    <label>Estado</label>
-                    <select id="editStatus">
-                        <option value="active">Activo</option>
-                        <option value="suspended">Suspendido</option>
-                    </select>
-                </div>
-                <div class="modal-buttons">
-                    <button type="submit" class="btn-primary">Guardar</button>
-                    <button type="button" onclick="closeEditModal()" class="btn-secondary">Cancelar</button>
-                </div>
-            </form>
-        </div>
     </div>
 
     <!-- Firebase y Scripts -->
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <!-- Config PRIMERO -->
     <script src="js/config.js"></script>
+    <!-- Admin DESPUÉS -->
     <script src="js/admin.js"></script>
 </body>
 </html>
+
