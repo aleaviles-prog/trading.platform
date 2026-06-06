@@ -27,8 +27,6 @@
         <!-- Menú de cuenta (oculto por defecto) -->
         <div id="accountMenu" class="account-menu hidden">
             <div class="menu-item" onclick="showAccountInfo()">📊 Datos de Cuenta</div>
-            <div class="menu-item" onclick="window.location.href='deposit.html'">💰 Depositar</div>
-            <div class="menu-item" onclick="window.location.href='withdraw.html'">💸 Retirar</div>
             <div class="menu-item" onclick="showHistory()">📜 Historial</div>
             <div class="menu-item" onclick="logout()">🚪 Cerrar Sesión</div>
         </div>
@@ -62,7 +60,12 @@
         <div class="main-content">
             <!-- Gráfico -->
             <div class="chart-container">
-                <div id="tradingview_chart"></div>
+                <div style="padding: 20px; background: #1a1a2e; border-radius: 10px;">
+                    <p style="text-align: center; color: #aaa;">Gráfico de trading en tiempo real</p>
+                    <div style="height: 400px; background: #0d0d0d; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <p style="color: #666;">Gráfico interactivo aquí</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Panel de Trading -->
@@ -111,14 +114,15 @@
         </div>
     </div>
 
-    <!-- TradingView Widget -->
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
-    <!-- Scripts propios -->
+    <!-- Config PRIMERO -->
     <script src="js/config.js"></script>
+    <!-- Trading DESPUÉS -->
     <script src="js/trading.js"></script>
 </body>
+</html>
+
 </html>
